@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내용 정리(화살표 함수와 일반 함수의 차이점)</title>
+    <style>
+        .txt {
+            width: 100vw;
+            height: 100%;
+            padding: 2vw;
+            margin-bottom: 1vw;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="txt">
+        <h1>1. 기본 명령어 및 기본 설정</h1>
+        <p>
+        nom - 노드 패키지 매니저 (노드의 여러 작업 도구를 관리해즘)<br>
+        npc - 내가 사용하는 패키지들의 버전을 최신으로 유지시켜줌<br><br>
+        <br>
+        <br>
+        < react 폴더 만들기 ><br>
+        npx create-react-app hello<br>
+        cd hello<br>
+        npm start<br>
+        Local:  http://localhost:3000 <br>
+        (붙여넣기)<br>
+        <br>
+        control + c : 종료<br>
+        npm start : 시작<br>
+        <br>
+        <br>
+        (vs코드)package.json : 설정 메뉴같은 것임***<br>
+        <br>
+        “dependencies” : 외부의 패키지 모듈<br>
+        <br>
+        리액트는 가상 돔(버츄얼 돔) 임<br>
+        html은 쨍강이 임<br>
+        <br>
+        "scripts” : npm 뒤에 올 명렬어들의 줄임말을 나타냄<br>
+        <br>
+        <br>
+        <br>
+        < jsx ><br>
+        function App() /* 파일이름과 같아야 함 */<br>
+        /* 시작 태그와 마감 태그 사이에 적을 내용이 없으면 />만 적어도 됨 */<br>
+        export default App; /* import를 할 때 App함수를 내보내겠다는 뜻임 */<br>
+        <br>
+        </p>
+    </div>
+
+    <div class="txt">
+        <h1>2. 화살표 함수와 일반 함수의 차이점</h1>
+        <p>
+            화살표 함수는 생성자로 사용할 수 없음<br>
+            <br>
+            스스로의 this를 가질 수 없음<br>
+            생성될 때 this가 결정되며, 화살표 함수가 어떻게 사용되건 this는 바뀌지 않음
+        </p>
+        <img src="../noteIMG/arrow.png">
+        <p>내부 함수에 어떠한 바인딩도 하지 않았지만 화살표 함수로 정의 했기 때문에 this가 introOdject를 가르킴</p>
+    </div>
+</body>
+</html>
