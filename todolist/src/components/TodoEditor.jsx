@@ -1,7 +1,10 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useContext } from 'react';
+import { TodoDispatchContext } from '../App';
 import './css/TodoEditor.css'
 
-const TodoEditor = ({onCreate}) => {
+const TodoEditor = () => { // useContext를 통해 {onCreate}를 import 해 올 이유가 사라짐
+    const {onCreate} = useContext(TodoDispatchContext) // TodoDispatchContext를 가져옴
+
     const [content, setContent] = useState();
     const inputRef = useRef();
 

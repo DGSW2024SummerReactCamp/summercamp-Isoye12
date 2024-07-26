@@ -1,10 +1,16 @@
+import React from 'react';
+import { useContext } from 'react';
+import { TodoDispatchContext } from '../App';
 import './css/TodoItem.css';
 
-const TodoItem = ({id, content, isDone, createdDate, onUpdate, onDelete}) => {
+const TodoItem = ({id, content, isDone, createdDate}) => { // TodoDispatchContext를 통해 onUpdate, onDelete를 지움
+    const {onUpdate, onDelete} = useContext(TodoDispatchContext);
+
     const onChangeCheckbox = () => {
         // 체크한 todo의 id를 App에 보내줌
         onUpdate(id)
     };
+
 
     const onClickDelete = () => {
         // 삭제한 todo의 id를 App에 보내줌
@@ -29,4 +35,4 @@ const TodoItem = ({id, content, isDone, createdDate, onUpdate, onDelete}) => {
     )
 }
 
-export default TodoItem
+export default React.memo(TodoItem); // TodoList에 사용하면 안되나 싶어도 이게 더 나음 (이유 들었는대 까먹음)
